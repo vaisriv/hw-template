@@ -29,25 +29,25 @@
 
 \pagebreak
 
-\begin{hwkProblem}{1}{Introducing Problems}
+\begin{hwkProblem}{1}{Introducing Problems} \label{hwk:p01}
 
 	Homework problems are placed on individual pages.
 
-	\hwkSol{}
+	\hwkSol{} \label{hwk:s01}
 
 	Solutions are placed below the problem statement, and can be split
 
-	\hwkPart{}
+	\hwkPart{} \label{hwk:s01a}
 
 	into
 
-	\hwkPart{}
+	\hwkPart{} \label{hwk:s01b}
 
 	different parts.
 
 \end{hwkProblem}
 
-\begin{hwkProblem}{2}{Defining Features}
+\begin{hwkProblem}{2}{Defining Features} \label{hwk:p02}
 		
 	Problems can include \( \textbf{inline math: } F_{P} = - b \dot{x}^{2} \) and \textbf{display math:}
 
@@ -55,7 +55,7 @@
 		\Delta E_{12} = Q_{12} + W_{12} \therefore W_{12} = Q_{12}
 	.\]
 	
-	\hwkSol{}
+	\hwkSol{} \label{hwk:s02}
 
 	And so can solutions. Personally, I like to use \mintinline{latex}{align*} environments (though you can use \mintinline{latex}{gather*} environments) for multi-line math.
 
@@ -66,6 +66,8 @@
 		{\left[ - \frac{1}{\dot{x}} \right]}^{\dot{x}}_{v_{0}}  = - \frac{b}{m_{P}} \left( t - t_{0} \right) \\
 		\dot{x}                                               = \left[ v_{0}^{-1} + \frac{b}{m_{P}} \left( t - t_{0} \right) \right] \qed
 	.\end{align*}
+
+	\hwkCode{} \label{code:s02}
 
 	We can also display code blocks using \mintinline{latex}{minted} environments.
 
@@ -100,12 +102,12 @@
 
 \end{hwkProblem}
 
-\begin{hwkProblem}{3}{File insertion}
+\begin{hwkProblem}{3}{File insertion} \label{hwk:p03}
 
 	We can also insert files at will. As we can see here, the problem statement provides code for us.
 	\inputminted{julia}{./code/p03.jl}
 
-	\hwkSol
+	\hwkSol{} \label{hwk:s03}
 
 	I like to use the filepath convention \mintinline{bash}{./code/pXX.jl} for code used in problem statements, \mintinline{bash}{./code/sXX.jl} for code used in solutions, and solution program output in \mintinline{bash}{./code/sXX.txt}. (This convention can be extended to problems with multiple parts by appending the part number to the filename: \mintinline{bash}{./code/{s03a.jl, s03b.jl, etc}}.)
 
@@ -114,20 +116,20 @@
 
 	As you can see, our code outputs an image. I like to save them in \mintinline{bash}{./images/sXX.png} (following the filepath naming convention we used for our code files). Let's display it here to finish off our solution. To display images, we use a combination of a \mintinline{latex}{figure} environment and a \mintinline{latex}{center} environment.
 
-	\begin{figure}[H]
+	\begin{figure}[H] \label{fig:s03}
 		\begin{center}
 			\includegraphics[width=0.45\textwidth]{./images/s03.png}
 		\end{center}
-		\caption{Data Plot}\label{fig:s03}
+		\caption{Data Plot}
 	\end{figure}
 
 \end{hwkProblem}
 
-\begin{hwkProblem}{Write number here}{Write name of problem here}
+\begin{hwkProblem}{Write number here}{Write name of problem here} \label{hwk:p04}
 
 	Write problem statement here.
 
-	\hwkSol{}
+	\hwkSol{} \label{hwk:s04}
 
 	Write solution here.
 
