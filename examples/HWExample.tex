@@ -1,5 +1,5 @@
-\input{./lib/hw-setup/tex/HWSetup}
-\input{./lib/hw-setup/tex/EngBindings}
+\input{../lib/hw-setup/tex/HWSetup}
+\input{../lib/hw-setup/tex/EngBindings}
 
 %
 % Homework Details
@@ -13,15 +13,15 @@
 %   - Author
 %
 
-\newcommand{\hmwkTitle}{Title}
-\newcommand{\hmwkSubTitle}{Subtitle}
-\newcommand{\hmwkDueDate}{Due Date}
-\newcommand{\hmwkDueTime}{11:59 PM}
-\newcommand{\hmwkClass}{Course - Section}
-\newcommand{\hmwkClassTime}{Time}
-\newcommand{\hmwkClassInstructor}{Instuctor}
-\newcommand{\hmwkAuthorName}{\textbf{Author}}
-\newcommand{\hmwkCompletionDate}{\today}
+\hwkTitle{Title}
+\hwkSubTitle{Subtitle}
+\hwkDueDate{2026-02-03}
+\hwkDueTime{11:59:00}
+\hwkClass{Course - Section}
+\hwkClassTime{09:00:00}
+\hwkInstructor{Instuctor}
+\hwkAuthor{Author}
+\hwkCompletionDate{\today}
 
 \begin{document}
 
@@ -29,9 +29,14 @@
 
 \pagebreak
 
-\begin{hwkProblem}{1}{Introducing Problems} \label{hwk:p01}
+\begin{hwkProblem}{1}{Introducing Problems \textit{(\# pts.)}} \label{hwk:p01}
 
 	Homework problems are placed on individual pages.
+
+	\begin{enumerate}[label=\alph*.]
+		\item \label{hwk:p01a} Instructions
+		\item \label{hwk:p01b} Instructions
+	\end{enumerate}
 
 	\hwkSol{} \label{hwk:s01}
 
@@ -47,7 +52,7 @@
 
 \end{hwkProblem}
 
-\begin{hwkProblem}{2}{Defining Features} \label{hwk:p02}
+\begin{hwkProblem}{2}{Defining Features \textit{(\# pts.)}} \label{hwk:p02}
 		
 	Problems can include \( \textbf{inline math: } F_{P} = - b \dot{x}^{2} \) and \textbf{display math:}
 
@@ -102,7 +107,7 @@
 
 \end{hwkProblem}
 
-\begin{hwkProblem}{3}{File insertion} \label{hwk:p03}
+\begin{hwkProblem}{3}{File insertion \textit{(\# pts.)}} \label{hwk:p03}
 
 	We can also insert files at will. As we can see here, the problem statement provides code for us.
 	\inputminted{julia}{./code/p03.jl}
@@ -125,7 +130,7 @@
 
 \end{hwkProblem}
 
-\begin{hwkProblem}{Write number here}{Write name of problem here} \label{hwk:p04}
+\begin{hwkProblem}{Write number here}{Write name of problem here \textit{(\# pts.)}} \label{hwk:p04}
 
 	Write problem statement here.
 
