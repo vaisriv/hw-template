@@ -1,0 +1,3 @@
+[submodule "lib/hw-setup"]
+	path = lib/hw-setup
+	url = git@github.com:vaisriv/hw-setup
