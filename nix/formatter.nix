@@ -15,7 +15,7 @@ inputs.treefmt-nix.lib.mkWrapper pkgs {
         alejandra = {
             options = [
                 "--experimental-config"
-                "./.nix/fmt/alejandra.toml"
+                "./nix/fmt/alejandra.toml"
             ];
         };
     };
