@@ -5,15 +5,15 @@
 # *.[oa]
 # *~
 
-# ignore python venvs
-**/.venv
-**/__pycache__
-
-# ignore nix artifacts
+# nix
 .direnv
 result
 result-*
 
-# ignore latex aux/sync files
+# latex
 **/.texaux
 **/*.synctex.gz
+
+# python
+**/.venv
+**/__pycache__
