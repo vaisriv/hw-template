@@ -24,8 +24,14 @@ inputs.treefmt-nix.lib.mkWrapper pkgs {
     };
 
     # latex
-    programs = {
-        latexindent.enable = true;
+    programs.latexindent.enable = true;
+    settings.formatter = {
+        latexindent = {
+            options = [
+                "-y"
+                "defaultIndent: '    '"
+            ];
+        };
     };
 
     # python
