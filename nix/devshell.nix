@@ -1,8 +1,4 @@
-{
-    pkgs,
-    perSystem,
-    ...
-}:
+{ pkgs, perSystem, ... }:
 perSystem.devshell.mkShell {
     name = "hw devshell";
     motd = ''
@@ -97,14 +93,15 @@ perSystem.devshell.mkShell {
         texlab
 
         # python
-        (python3.withPackages (ps:
-            with ps; [
+        (python3.withPackages (
+            ps: with ps; [
                 # python packages here
                 matplotlib
                 numpy
                 scipy
                 cartopy
-            ]))
+            ]
+        ))
 
         # font
         pkgs.nerd-fonts.iosevka-term

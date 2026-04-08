@@ -31,112 +31,112 @@
 
 \begin{hwkProblem}{1}{Introducing Problems \textit{(\# pts.)}} \label{hwk:p01}
 
-	Homework problems are placed on individual pages.
+    Homework problems are placed on individual pages.
 
-	\begin{enumerate}[label=\alph*.]
-		\item \label{hwk:p01a} Instructions
-		\item \label{hwk:p01b} Instructions
-	\end{enumerate}
+    \begin{enumerate}[label=\alph*.]
+        \item \label{hwk:p01a} Instructions
+        \item \label{hwk:p01b} Instructions
+    \end{enumerate}
 
-	\hwkSol{} \label{hwk:s01}
+    \hwkSol{} \label{hwk:s01}
 
-	Solutions are placed below the problem statement, and can be split
+    Solutions are placed below the problem statement, and can be split
 
-	\hwkPart{} \label{hwk:s01a}
+    \hwkPart{} \label{hwk:s01a}
 
-	into
+    into
 
-	\hwkPart{} \label{hwk:s01b}
+    \hwkPart{} \label{hwk:s01b}
 
-	different parts.
+    different parts.
 
 \end{hwkProblem}
 
 \begin{hwkProblem}{2}{Defining Features \textit{(\# pts.)}} \label{hwk:p02}
-		
-	Problems can include \( \textbf{inline math: } F_{P} = - b \dot{x}^{2} \) and \textbf{display math:}
 
-	\[
-		\Delta E_{12} = Q_{12} + W_{12} \therefore W_{12} = Q_{12}
-	.\]
-	
-	\hwkSol{} \label{hwk:s02}
+    Problems can include \( \textbf{inline math: } F_{P} = - b \dot{x}^{2} \) and \textbf{display math:}
 
-	And so can solutions. Personally, I like to use \mintinline{latex}{align*} environments (though you can use \mintinline{latex}{gather*} environments) for multi-line math.
+    \[
+        \Delta E_{12} = Q_{12} + W_{12} \therefore W_{12} = Q_{12} .
+    \]
 
-	\begin{align*}
-		m_{P} \frac{d\dot{x}}{dt}                             = F_{P}                                     \\
-		m_{P} \frac{d\dot{x}}{dt}                             = -b\dot{x}^{2}                             \\
-		\frac{d\dot{x}}{\dot{x}^2}                            = - \frac{b}{m_{P}} dt                      \\
-		{\left[ - \frac{1}{\dot{x}} \right]}^{\dot{x}}_{v_{0}}  = - \frac{b}{m_{P}} \left( t - t_{0} \right) \\
-		\dot{x}                                               = \left[ v_{0}^{-1} + \frac{b}{m_{P}} \left( t - t_{0} \right) \right] \qed
-	.\end{align*}
+    \hwkSol{} \label{hwk:s02}
 
-	\hwkCode{} \label{code:s02}
+    And so can solutions. Personally, I like to use \mintinline{latex}{align*} environments (though you can use \mintinline{latex}{gather*} environments) for multi-line math.
 
-	We can also display code blocks using \mintinline{latex}{minted} environments.
+    \begin{align*}
+        m_{P} \frac{d\dot{x}}{dt}                             = F_{P}                                        \\
+        m_{P} \frac{d\dot{x}}{dt}                             = -b\dot{x}^{2}                                \\
+        \frac{d\dot{x}}{\dot{x}^2}                            = - \frac{b}{m_{P}} dt                         \\
+        {\left[ - \frac{1}{\dot{x}} \right]}^{\dot{x}}_{v_{0}}  = - \frac{b}{m_{P}} \left( t - t_{0} \right) \\
+        \dot{x}                                               = \left[ v_{0}^{-1} + \frac{b}{m_{P}} \left( t - t_{0} \right) \right] \qed .
+    \end{align*}
 
-	\begin{minted}{python}
-		minutes_to_convert = 122
+    \hwkCode{} \label{code:s02}
 
-		hours = int(minutes_to_convert / 60)
-		minutes = minutes_to_convert % 60
+    We can also display code blocks using \mintinline{latex}{minted} environments.
 
-		convert_label = " Minutes "
-		if minutes_to_convert == 1:
-		    convert_label = " Minute "
+    \begin{minted}{python}
+	minutes_to_convert = 122
 
-		hour_label = " Hours, "
-		if hours == 1:
-		    hour_label = " Hour, "
+	hours = int(minutes_to_convert / 60)
+	minutes = minutes_to_convert % 60
 
-		minute_label = " Minutes"
-		if minutes == 1:
-		    minute_label = " Minute"
+	convert_label = " Minutes "
+	if minutes_to_convert == 1:
+	    convert_label = " Minute "
 
-		print(
-		    str(minutes_to_convert)
-		    + convert_label
-		    + "is the same as:\n"
-		    + str(hours)
-		    + hour_label
-		    + str(minutes)
-		    + minute_label
-		)
-	\end{minted}
+	hour_label = " Hours, "
+	if hours == 1:
+	    hour_label = " Hour, "
+
+	minute_label = " Minutes"
+	if minutes == 1:
+	    minute_label = " Minute"
+
+	print(
+	    str(minutes_to_convert)
+	    + convert_label
+	    + "is the same as:\n"
+	    + str(hours)
+	    + hour_label
+	    + str(minutes)
+	    + minute_label
+	)
+    \end{minted}
 
 \end{hwkProblem}
 
 \begin{hwkProblem}{3}{File insertion \textit{(\# pts.)}} \label{hwk:p03}
 
-	We can also insert files at will. As we can see here, the problem statement provides code for us.
-	\inputminted{python}{./src/p03.py}
+    We can also insert files at will. As we can see here, the problem statement provides code for us.
+    \inputminted{python}{./src/p03.py}
 
-	\hwkSol{} \label{hwk:s03}
+    \hwkSol{} \label{hwk:s03}
 
-	I like to use the filepath convention \mintinline{bash}{./src/pXX.py} for code used in problem statements, \mintinline{bash}{./src/sXX.py} for code used in solutions, and solution program output in \mintinline{bash}{./outputs/text/sXX.txt}. (This convention can be extended to problems with multiple parts by appending the part number to the filename:\\\mintinline{bash}{./outputs/text/{s03a.py, s03b.py, etc}}.)
+    I like to use the filepath convention \mintinline{bash}{./src/pXX.py} for code used in problem statements, \mintinline{bash}{./src/sXX.py} for code used in solutions, and solution program output in \mintinline{bash}{./outputs/text/sXX.txt}. (This convention can be extended to problems with multiple parts by appending the part number to the filename:\\\mintinline{bash}{./outputs/text/{s03a.py, s03b.py, etc}}.)
 
-	\inputminted{python}{./src/s03.py}
-	\inputminted{python}{./outputs/text/s03.txt}
+    \inputminted{python}{./src/s03.py}
+    \inputminted{python}{./outputs/text/s03.txt}
 
-	As you can see, our code outputs an image. I like to save them in \mintinline{bash}{./outputs/figures/sXX.png} (following the filepath naming convention we used for our code files). Let's display it here to finish off our solution. To display images, we use a combination of a \mintinline{latex}{figure} environment and a \mintinline{latex}{center} environment.
+    As you can see, our code outputs an image. I like to save them in \mintinline{bash}{./outputs/figures/sXX.png} (following the filepath naming convention we used for our code files). Let's display it here to finish off our solution. To display images, we use a combination of a \mintinline{latex}{figure} environment and a \mintinline{latex}{center} environment.
 
-	\begin{figure}[H] \label{fig:s03}
-		\begin{center}
-			\includegraphics[width=0.65\textwidth]{./outputs/figures/s03.png}
-		\end{center}
-		\caption{Data Plot}
-	\end{figure}
+    \begin{figure}[H] \label{fig:s03}
+        \begin{center}
+            \includegraphics[width=0.65\textwidth]{./outputs/figures/s03.png}
+        \end{center}
+        \caption{Data Plot}
+    \end{figure}
 
 \end{hwkProblem}
 
 \begin{hwkProblem}{Write number here}{Write name of problem here \textit{(\# pts.)}} \label{hwk:p04}
 
-	Write problem statement here.
+    Write problem statement here.
 
-	\hwkSol{} \label{hwk:s04}
+    \hwkSol{} \label{hwk:s04}
 
-	Write solution here.
+    Write solution here.
 
 \end{hwkProblem}
 
