@@ -91,6 +91,7 @@ perSystem.devshell.mkShell {
         # latex
         texlive.combined.scheme-full
         texlab
+        textidote
 
         # python
         (python3.withPackages (

@@ -1,0 +1,5 @@
+--check en
+--dict reports/dict.txt
+--remove codeblock,hwkProblem
+--remove-macros pagebreak,DTMtoday,tableofcontents,listoffigures,listoflistings,hypertarget,pagenumbering,degreeCelsius,milli,nano
+--ignore sh:d:002,sh:figref,sh:nobreak,sh:nonp,sh:relpath,sh:seclen,sh:stacked,lt:en:GITHUB,lt:en:ENGLISH_WORD_REPEAT_RULE,lt:en:UPPERCASE_SENTENCE_START
