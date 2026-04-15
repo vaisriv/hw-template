@@ -21,12 +21,13 @@ inputs.treefmt-nix.lib.mkWrapper pkgs {
     };
 
     # latex
-    programs.latexindent.enable = true;
+    programs.texfmt.enable = true;
     settings.formatter = {
-        latexindent = {
+        texfmt = {
             options = [
-                "-y"
-                "defaultIndent: '    '"
+                "--nowrap"
+                "--tabsize"
+                "4"
             ];
         };
     };

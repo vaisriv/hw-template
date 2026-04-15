@@ -1,17 +1,22 @@
-\input{./lib/hw-setup/tex/HWSetup}
-\input{./lib/hw-setup/tex/EngBindings}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Imports and Setup     %
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%
-% Homework Details
-%   - Title
-%   - Subtitle
-%   - Due date
-%   - Due time
-%   - Course
-%   - Section/Time
-%   - Instructor
-%   - Author
-%
+\input{../lib/hw-setup/tex/HWSetup}
+\input{../lib/hw-setup/tex/EngBindings}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Homework Details      %
+% - Title               %
+% - Subtitle            %
+% - Due Date            %
+% - Due Time            %
+% - Course              %
+% - Section Time        %
+% - Instructor          %
+% - Author              %
+% - Submission Time     %
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \hwkTitle{HW00}
 \hwkSubTitle{Homework Template}
@@ -21,7 +26,11 @@
 \hwkClassTime{09:00:00}
 \hwkInstructor{Instuctor}
 \hwkAuthor{Vai Srivastava}
-\hwkCompletionDate{\today}
+\hwkCompletionDate{\DTMtoday}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Assignment            %
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -56,12 +65,12 @@
 
     \begin{figure}[H] \label{fig:s02}
         \begin{center}
-            \includegraphics[width=0.95\textwidth]{./outputs/figures/s02.png}
+            \includegraphics[width=0.95\textwidth]{../outputs/figures/s02.png}
         \end{center}
         \caption{Example}
     \end{figure}
 
-    \inputminted{python}{./outputs/text/s02.txt}
+    \inputminted{python}{../outputs/text/s02.txt}
 
     \hwkCode{} \label{code:s02}
 
