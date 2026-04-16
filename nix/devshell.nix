@@ -7,10 +7,10 @@ perSystem.devshell.mkShell {
     '';
 
     commands = [
-        # python helper
+        # python helpers
         {
             name = "py";
-            category = "[submission]";
+            category = "[python]";
             help = "run submission python script";
             command =
                 # bash
@@ -22,14 +22,31 @@ perSystem.devshell.mkShell {
 
                     echo -e -n "$CYAN"
                     echo -e "running python script for $(basename $(pwd)):$NC"
-                    python ./submission.py
+                    python ./submission.py $@
+                '';
+        }
+        {
+            name = "pyt";
+            category = "[python]";
+            help = "type check submission python script";
+            command =
+                # bash
+                ''
+                    CYAN="\e[0;36m"
+                    NC="\e[0m"
+
+                    cd $(git rev-parse --show-toplevel)
+
+                    echo -e -n "$CYAN"
+                    echo -e "checking python script for $(basename $(pwd)):$NC"
+                    ty check --python "$(which python3)" src $@
                 '';
         }
 
         # latex helpers
         {
             name = "ltx";
-            category = "[submission]";
+            category = "[latex]";
             help = "compile submission latex doc";
             command =
                 # bash
@@ -41,12 +58,12 @@ perSystem.devshell.mkShell {
 
                     echo -e -n "$CYAN"
                     echo -e "compiling latex document for $(basename $(pwd)):$NC"
-                    latexmk
+                    latexmk $@
                 '';
         }
         {
             name = "ltxw";
-            category = "[submission]";
+            category = "[latex]";
             help = "compile (and watch) submission latex doc";
             command =
                 # bash
@@ -58,12 +75,12 @@ perSystem.devshell.mkShell {
 
                     echo -e -n "$CYAN"
                     echo -e "watching latex document for $(basename $(pwd)):$NC"
-                    latexmk -pvc
+                    latexmk -pvc $@
                 '';
         }
         {
             name = "ltxc";
-            category = "[submission]";
+            category = "[latex]";
             help = "clean-compile submission latex doc";
             command =
                 # bash
@@ -82,7 +99,7 @@ perSystem.devshell.mkShell {
 
                     echo -e -n "$CYAN"
                     echo -e "compiling latex document:$NC"
-                    latexmk
+                    latexmk $@
                 '';
         }
     ];
@@ -97,12 +114,15 @@ perSystem.devshell.mkShell {
         (python3.withPackages (
             ps: with ps; [
                 # python packages here
+                pandas
                 matplotlib
                 numpy
                 scipy
                 cartopy
             ]
         ))
+        uv
+        ty
 
         # font
         pkgs.nerd-fonts.iosevka-term
