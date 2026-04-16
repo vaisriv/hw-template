@@ -26,7 +26,7 @@ perSystem.devshell.mkShell {
                 '';
         }
         {
-            name = "pyt";
+            name = "tpy";
             category = "[python]";
             help = "type check submission python script";
             command =
@@ -100,6 +100,23 @@ perSystem.devshell.mkShell {
                     echo -e -n "$CYAN"
                     echo -e "compiling latex document:$NC"
                     latexmk $@
+                '';
+        }
+        {
+            name = "tltx";
+            category = "[latex]";
+            help = "type check submission latex doc";
+            command =
+                # bash
+                ''
+                    CYAN="\e[0;36m"
+                    NC="\e[0m"
+
+                    cd $(git rev-parse --show-toplevel)
+
+                    echo -e -n "$CYAN"
+                    echo -e "checking latex document for $(basename $(pwd)):$NC"
+                    textidote reports/main.tex $@
                 '';
         }
     ];
