@@ -43,16 +43,32 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1773166292,
-        "narHash": "sha256-FIr6ugpUGLTcg8V69dFCuFD6lipA31JK6abnE6GNbqM=",
+        "lastModified": 1789388058,
+        "narHash": "sha256-OBaOPZsxep3L7A6+TCswkPYcg1pvMSnzY/7vyQWPKus=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "d9c8c765bcce2d462186b61e19da00d4198bafe0",
+        "rev": "e97b635f4779d81602d9cb3baa604773a33be53e",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "release-25.11",
+        "ref": "staging-next",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-unstable": {
+      "locked": {
+        "lastModified": 1789286504,
+        "narHash": "sha256-eiEK7cKZORNEvX0GeF3RtNEF/JXhgf2RqSp3230q13E=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "ef34387ddd751e1ab8857adf4676492d32eb24ec",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -62,6 +78,7 @@
         "blueprint": "blueprint",
         "devshell": "devshell",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-unstable": "nixpkgs-unstable",
         "treefmt-nix": "treefmt-nix"
       }
     },

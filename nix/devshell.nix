@@ -123,7 +123,7 @@ perSystem.devshell.mkShell {
 
     packages = with pkgs; [
         # latex
-        texlive.combined.scheme-full
+        texliveFull
         texlab
         textidote
 
