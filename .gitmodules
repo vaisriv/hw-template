@@ -1,0 +1,6 @@
+[submodule "nix/templates/latex"]
+	path = nix/templates/latex
+	url = git@github.com:vaisriv/hw-template-latex
+[submodule "nix/templates/enae441"]
+	path = nix/templates/enae441
+	url = git@github.com:vaisriv/enae441-hw-template
