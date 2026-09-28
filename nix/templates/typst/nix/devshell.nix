@@ -20,7 +20,7 @@ perSystem.devshell.mkShell {
             category = "[python]";
             help = "lsp";
             # command = "ty check --python '$(which python3)' src $@";
-            command = "uvx ruff check src $@";
+            command = "uvx ruff check --watch src $@";
         }
         ## typst
         {
