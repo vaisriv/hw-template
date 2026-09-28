@@ -60,6 +60,7 @@ perSystem.devshell.mkShell {
 
         # typst
         tinymist
+        hayagriva
     ];
 
     env = [
