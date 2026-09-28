@@ -9,9 +9,9 @@ def heading(problem):
 
 def main():
     #########
-    # p2.10 #
+    # p02 #
     #########
-    heading("p2.10")
+    heading("p02")
 
     x = np.linspace(0, 10, 100)
     y = np.sin(x)

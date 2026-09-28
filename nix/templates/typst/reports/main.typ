@@ -60,3 +60,8 @@
 See the #link("https://github.com/vaisriv/<HW_ASSIGNMENT>/blob/main/src/index.py#L1")[Python code] for this problem.
 
 #pagebreak(weak: true)
+
+== Code
+
+#codly(header: [./src/index.py])
+#raw(read("../src/index.py"), block: true, lang: "python") <code:index.py>
