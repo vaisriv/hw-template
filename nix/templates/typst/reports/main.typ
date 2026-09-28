@@ -1,3 +1,6 @@
+/////////////
+// Imports //
+/////////////
 #import "@preview/adaptable-pset:0.2.0": *
 #import "@preview/physica:0.9.8": *
 #import "@preview/unify:0.8.1": *
@@ -5,6 +8,10 @@
 #import "@preview/codly-languages:0.1.1": *
 #show: codly-init.with()
 #codly(languages: codly-languages)
+
+/////////////////
+// Maths Setup //
+/////////////////
 
 // upright vectors
 #let vectorboldupright(a) = vb($upright(#a)$)
@@ -19,6 +26,10 @@
 #set math.mat(delim: "[")
 #let vecrowOld = vecrow
 #let vecrow = vecrowOld.with(delim: "[")
+
+////////////////////
+// Document Setup //
+////////////////////
 
 // assignment info
 #show: homework.with(
@@ -41,6 +52,11 @@
 // problem headings
 #let probOld = prob
 #let prob = prob.with(color: black)
+
+////////////////////////////
+// The Assignment Itself: //
+// Problems and Solutions //
+////////////////////////////
 
 #prob(title: [Parts #emph[(\# pts)]])[
     1. Instructions
