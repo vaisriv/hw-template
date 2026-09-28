@@ -28,12 +28,20 @@
     paper-size: "us-letter", 
 )
 
+// document settings
 #set text(font: "New Computer Modern", size: 10pt)
 #set enum(numbering: "a)")
 
-#prob(title: [Parts #emph[(\# pts)]], color: black)[
-    1. Instructions <hwk:p01a>
-    2. Instructions <hwk:p01b>
+// problem headings
+#let probOld = prob
+#let prob = prob.with(color: black)
+
+#prob(title: [Parts #emph[(\# pts)]])[
+    1. Instructions
+    <hwk:p01a>
+
+    2. Instructions
+    <hwk:p01b>
 ] <hwk:p01>
 
 1. Answer
@@ -46,7 +54,7 @@
 
 #pagebreak(weak: true)
 
-#prob(title: [Code #emph[(\# pts)]], color: black)[
+#prob(title: [Code #emph[(\# pts)]])[
     Instructions
 ] <hwk:p02>
 
