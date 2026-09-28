@@ -14,6 +14,12 @@
 #let vectorarrowupright(a) = va($upright(#a)$)
 #let vau = vectorarrowupright
 
+// automatically use square brackets for vectors and matricies
+#set math.vec(delim: "[")
+#set math.mat(delim: "[")
+#let vecrowOld = vecrow
+#let vecrow = vecrowOld.with(delim: "[")
+
 // assignment info
 #show: homework.with(
     title: "HW00",
