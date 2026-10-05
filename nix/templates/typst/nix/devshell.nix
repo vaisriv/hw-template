@@ -46,13 +46,16 @@ perSystem.devshell.mkShell {
 
     packages = with pkgs; [
         # python
-        (python3.withPackages (
+        # WARN: python3 is overriden to unstable as python3Packages.cartopy is broken on release-26.05
+        # https://github.com/NixOS/nixpkgs/issues/516636
+        (perSystem.nixpkgs-unstable.python3.withPackages (
             ps: with ps; [
                 # python packages here
                 pandas
                 matplotlib
                 numpy
                 scipy
+                cartopy
             ]
         ))
         uv
